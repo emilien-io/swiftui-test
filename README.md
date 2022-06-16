@@ -25,7 +25,7 @@ Using those 3 wrappers, `Mirror.swift` gets notified every time the `entry` is u
 
 # Different approach
 
-We could also have used an `@ObservedObject` property (see a different implementation on [swift_ui-observed-object](https://github.com/emilien-io/swiftui-test/tree/swift_ui-observed-object) branch.
+We could also have used an `@ObservedObject` property (see a different implementation on [swift_ui-observed-object](https://github.com/emilien-io/swiftui-test/tree/swift_ui-observed-object) branch).
 
 Here, we use an `@ObservedObject` instead of using an `@AppState` object. As we saw earlier, the difference between these two wrapper is ownership. `@AppState` owns the object and handles its lifetime while `@ObservedObject` — as its name suggests — observe the object without owning it directly.
 
