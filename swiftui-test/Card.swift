@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Card: View {
-    @EnvironmentObject var entry: Entry
+    @ObservedObject var entry: Entry
     
     var body: some View {
         VStack {
@@ -30,6 +30,6 @@ struct Card: View {
 
 struct Card_Previews: PreviewProvider {
     static var previews: some View {
-        Card().environmentObject(Entry(text: ""))
+        Card(entry: Entry(text: "This is an example."))
     }
 }

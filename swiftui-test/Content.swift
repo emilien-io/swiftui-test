@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct Content: View {
+    private var entry = Entry(text: "")
     
     var body: some View {
         VStack {
-            Card()
-            Mirror().frame(maxWidth: .infinity, maxHeight: .infinity)
+            Card(entry: entry)
+            Mirror(entry: entry).frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
 }
 
 struct Content_Previews: PreviewProvider {
     static var previews: some View {
-        Content().environmentObject(Entry(text: "This is an example"))
+        Content()
     }
 }

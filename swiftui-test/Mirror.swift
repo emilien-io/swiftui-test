@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Mirror: View {
-    @EnvironmentObject var entry: Entry
+    @ObservedObject var entry: Entry
     
     var body: some View {
         Text(entry.value)
@@ -24,6 +24,6 @@ struct Mirror: View {
 
 struct Mirror_Previews: PreviewProvider {
     static var previews: some View {
-        Mirror().environmentObject(Entry(text: "This is an example."))
+        Mirror(entry: Entry(text: "This is an example."))
     }
 }
